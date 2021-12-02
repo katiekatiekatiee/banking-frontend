@@ -1,11 +1,15 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
 import Displays from './components/Displays'
+import { NavLink } from 'react-router-dom'
 
 function App() {
   return (
     <div className="App">
-      <Displays />
+      <NavLink to="/" >Home</NavLink> |  
+      <NavLink to="/transactions">Transaction History</NavLink> | 
+      <NavLink to="/new" >Add Transaction</NavLink> 
+        <Displays />
     </div>
   );
 }
