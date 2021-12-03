@@ -1,11 +1,13 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { postTransactions } from './../../redux/transactionsActions'
 
-export default class TransactionsContainer extends Component {
+class TransactionsContainer extends Component {
 
     componentDidMount(){
         fetch("http://localhost:3000/transactions")
         .then(r => r.json())
-        .then(data => console.log(data))
+        .then(transactionData => this.props.dispatchPostTransactions(transactionData))
     }
 
     render(){
@@ -17,3 +19,11 @@ export default class TransactionsContainer extends Component {
     }
    
 }
+
+function mapDispatchToProps(dispatch) {
+    return {
+        dispatchPostTransactions: (transactions) => dispatch(postTransactions())
+    }
+}
+
+export default connect(null, mapDispatchToProps)(TransactionsContainer)
