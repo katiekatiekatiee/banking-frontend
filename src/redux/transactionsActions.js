@@ -1,0 +1,1 @@
+export const postTransactions = (transactions) => ({type: "POST_TRANSACTIONS", payload: transactions})
