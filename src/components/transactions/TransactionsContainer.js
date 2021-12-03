@@ -5,15 +5,16 @@ import { postTransactions } from './../../redux/transactionsActions'
 class TransactionsContainer extends Component {
 
     componentDidMount(){
-        fetch("http://localhost:3000/transactions")
-        .then(r => r.json())
-        .then(transactionData => this.props.dispatchPostTransactions(transactionData))
+        this.props.dispatchPostTransactions()
     }
 
     render(){
         return (
             <div>
-                Transactions Go Here!
+                <h2>Transaction History</h2>
+                <ul>
+                    {this.props.transactions.map(transaction => <li key={transaction.id}>{transaction.date} | {transaction.amount}</li>)}
+                </ul>
             </div>
         )
     }
@@ -29,7 +30,7 @@ function mapStateToProps(state){
 
 function mapDispatchToProps(dispatch) {
     return {
-        dispatchPostTransactions: (transactions) => dispatch(postTransactions())
+        dispatchPostTransactions: () => dispatch(postTransactions())
     }
 }
 

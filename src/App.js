@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <NavLink to="/" >Home</NavLink> |  
-      <NavLink to="/transactions-history">Transaction History</NavLink> | 
+      <NavLink to="/transaction-history">Transaction History</NavLink> | 
       <NavLink to="/new" >Add Transaction</NavLink> 
         <Displays />
     </div>
