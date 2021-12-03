@@ -6,7 +6,7 @@ function reducer(state = {goals: [], transactions: []}, action) {
                 transactions: action.payload
             };
 
-        break;
+        // break;
         default:
             return state;
     }
