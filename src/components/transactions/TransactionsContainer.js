@@ -12,9 +12,11 @@ class TransactionsContainer extends Component {
         return (
             <div>
                 <h2>Transaction History</h2>
-                <ul>
-                    {this.props.transactions.map(transaction => <li key={transaction.id}>{transaction.date} | {transaction.amount}</li>)}
-                </ul>
+                <div>
+                    {this.props.transactions.map(transaction => <p key={transaction.id}>
+                        {transaction.date} | {transaction.amount}
+                    </p>)}
+                </div>
             </div>
         )
     }
