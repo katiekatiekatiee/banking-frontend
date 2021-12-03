@@ -6,7 +6,7 @@ import TransactionsContainer from './transactions/TransactionsContainer';
 export default function Displays() {
     return (
         <Switch>
-            <Route path="/transactions" component={routerProps => <TransactionsContainer routerProps={routerProps}/>}></Route>
+            <Route path="/transactions-history" component={routerProps => <TransactionsContainer routerProps={routerProps}/>}></Route>
         </Switch>
     )
 }

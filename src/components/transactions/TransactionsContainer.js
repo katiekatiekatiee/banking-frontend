@@ -20,10 +20,17 @@ class TransactionsContainer extends Component {
    
 }
 
+function mapStateToProps(state){
+    return{
+        transactions: state.transactions 
+    }
+
+}
+
 function mapDispatchToProps(dispatch) {
     return {
         dispatchPostTransactions: (transactions) => dispatch(postTransactions())
     }
 }
 
-export default connect(null, mapDispatchToProps)(TransactionsContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(TransactionsContainer)
