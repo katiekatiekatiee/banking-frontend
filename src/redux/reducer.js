@@ -10,6 +10,11 @@ function reducer(state = {goals: [], transactions: []}, action) {
                 ...state, 
                 goals: action.payload
             };
+        case "ADD_TRANSACTION":
+            return {
+                ...state,
+                transactions: [...state.transactions, action.payload]
+            };
 
         // break;
         default:

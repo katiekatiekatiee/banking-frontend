@@ -1,6 +1,7 @@
 import React from 'react'
+import { connect } from 'react-redux'
 
-export default function GoalsDropdown() {
+function GoalsDropdown() {
     return (
         <div>
             <select>

@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import { addTransaction } from '../../redux/transactionsActions';
 import { connect } from 'react-redux'
 
-import React, { Component } from 'react'
-
 class NewTransactionForm extends Component {
 
     state = {
@@ -12,22 +10,22 @@ class NewTransactionForm extends Component {
         goal: ""
       }
     
-      handleChange = e => {
-        this.setState({
-            date: e.target.value,
-            amount: e.target.value,
-            goal: e.target.value})
-      }
+    //   handleChange = e => {
+    //     this.setState({
+    //         date: e.target.value,
+    //         amount: e.target.value,
+    //         goal: e.target.value})
+    //   }
     
-      handleSubmit = e => {
-        e.preventDefault()
-        this.props.dispatchAddTransaction(this.state)
-        // clear out my state
-        this.setState({
-            name: "",
-            amount: "",
-            goal: ""})
-      }
+    //   handleSubmit = e => {
+    //     e.preventDefault()
+    //     this.props.dispatchAddTransaction(this.state)
+        
+    //     this.setState({
+    //         name: "",
+    //         amount: "",
+    //         goal: ""})
+    //   }
 
     render() {
         return (
