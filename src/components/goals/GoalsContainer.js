@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { postGoals } from './../../redux/goalsActions'
+import { GoalsDropdown } from './GoalsDropdown'
 
 class GoalsContainer extends Component {
 
@@ -13,6 +14,8 @@ class GoalsContainer extends Component {
             <div>
                 {/* <h1>Savings Total: {insert functional component here that will add total of all savings}</h1> */}
                  <h2>Savings Totals (per goal)</h2>
+                 {/* <GoalsDropdown goals={this.props.goals}/> */}
+                 
                 <ul>
                     {this.props.goals.map(goal => <li key={goal.id}>
                         {goal.name}
