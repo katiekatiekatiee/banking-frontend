@@ -1,9 +1,15 @@
-import React from 'react'
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
 
-export default function GoalsContainer() {
-    return (
-        <div>
-            List of Goals Here!
-        </div>
-    )
+import React, { Component } from 'react'
+
+export default class GoalsContainer extends Component {
+    render() {
+        return (
+            <div>
+                
+            </div>
+        )
+    }
 }
+
