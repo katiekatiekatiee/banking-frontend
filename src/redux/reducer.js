@@ -5,6 +5,11 @@ function reducer(state = {goals: [], transactions: []}, action) {
                 ...state,
                 transactions: action.payload
             };
+        case "POST_GOALS":
+            return{
+                ...state, 
+                goals: action.payload
+            };
 
         // break;
         default:
