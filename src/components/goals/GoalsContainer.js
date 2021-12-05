@@ -1,13 +1,23 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-
-import React, { Component } from 'react'
+import { postGoals } from './../../redux/goalsActions'
 
 class GoalsContainer extends Component {
+
+    componentDidMount(){
+        this.props.dispatchPostGoals()
+    }
+
     render() {
         return (
             <div>
-                We got dem goals
+                {/* <h1>Savings Total: {insert functional component here that will add total of all savings}</h1> */}
+                 <h2>Savings Totals (per goal)</h2>
+                <ul>
+                    {this.props.goals.map(goal => <li key={goal.id}>
+                        {goal.name}
+                    </li>)}
+                </ul>
             </div>
         )
     }
