@@ -1,16 +1,21 @@
 //import logo from './logo.svg';
 import './App.css';
-import Displays from './components/Displays'
-import { NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom';
+import Displays from './components/Displays';
 
 function App() {
   return (
-    <div className="App">
-      <NavLink to="/" >Home</NavLink> |  
-      <NavLink to="/transaction-history">Transaction History</NavLink> | 
-      <NavLink to="/transactions/new">Add Transaction</NavLink> 
-        <Displays />
+    <div>
+      <div className="nav-links">
+        <NavLink to="/" >Home</NavLink> |  
+        <NavLink to="/transaction-history">Transaction History</NavLink> | 
+        <NavLink to="/transactions/new">Add Transaction</NavLink> 
+        
+      </div>
+      <Displays />
     </div>
+    
+    
   );
 }
 
