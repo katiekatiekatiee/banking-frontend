@@ -13,7 +13,7 @@ class GoalsContainer extends Component {
         return (
             <div>
                 {/* <h1>Savings Total: {insert functional component here that will add total of all savings}</h1> */}
-                 <h2>Reasons to Save:</h2>
+                 <h3>Reasons to Save:</h3>
                  {/* <GoalsDropdown goals={this.props.goals}/> */}
                  
                 <ul>

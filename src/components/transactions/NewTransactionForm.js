@@ -17,15 +17,15 @@ class NewTransactionForm extends Component {
     //         goal: e.target.value})
     //   }
     
-    //   handleSubmit = e => {
-    //     e.preventDefault()
-    //     this.props.dispatchAddTransaction(this.state)
+      handleSubmit = e => {
+        e.preventDefault()
+        this.props.dispatchAddTransaction(this.state)
         
-    //     this.setState({
-    //         name: "",
-    //         amount: "",
-    //         goal: ""})
-    //   }
+        this.setState({
+            name: "",
+            amount: "",
+            goal: ""})
+      }
 
     render() {
         return (
@@ -46,13 +46,11 @@ class NewTransactionForm extends Component {
                  type="text" />
 
             <label htmlFor="transaction-goal-input">Goal:</label>
-            <input 
-                 id="transaction-goal-input" 
-                 onChange={this.handleChange} 
-                 value={this.state.goal.id} 
-                 type="text" />
+            <select id="transaction-goal-input" onChange={this.handleChange} value={this.state.goal.id} type="text" >
+                {this.props.goals.map(goal => <option value={goal.id} key={goal.id}>{goal.name}</option>)}
+            </select>
 
-             <input type="submit" />
+             <input type="submit" value="Post Transaction" />
 
         </form>
         )
@@ -65,5 +63,12 @@ function mapDispatchToProps(dispatch){
     }
   }
 
+function mapStateToProps(state){
+    return{
+        goals: state.goals 
+    }
 
-export default connect(null, mapDispatchToProps)(NewTransactionForm)
+}
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(NewTransactionForm)

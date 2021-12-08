@@ -6,6 +6,7 @@ import Displays from './components/Displays';
 function App() {
   return (
     <div>
+      <h1>Track Your Savings Goals!</h1>
       <div className="nav-links">
         <NavLink to="/" >Home</NavLink> |  
         <NavLink to="/transaction-history">Transaction History</NavLink> | 

@@ -9,9 +9,9 @@ const NavBar = () => {
     return (
         <div className="navbar">
             <Switch>
-                <Route path="/transaction-history" component={routerProps => <TransactionsContainer routerProps={routerProps}/>}></Route>
-                <Route path="/" component={routerProps => <GoalsContainer routerProps={routerProps}/>}></Route>
-                <Route path="/transactions/new" component={routerProps => <NewTransactionForm routerProps={routerProps} />}></Route>
+                <Route exact path="/transaction-history" component={routerProps => <TransactionsContainer routerProps={routerProps}/>}></Route>
+                <Route exact path="/" component={routerProps => <GoalsContainer routerProps={routerProps}/>}></Route>
+                <Route exact path="/transactions/new" component={routerProps => <NewTransactionForm routerProps={routerProps} />}></Route>
             </Switch>
         </div>
     )
