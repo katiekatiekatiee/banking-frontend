@@ -9,12 +9,15 @@ class TransactionsContainer extends Component {
     }
 
     render(){
+        
         return (
+            
             <div>
                 <h2>Transaction History</h2>
                 <div>
                     {this.props.transactions.map(transaction => <p key={transaction.id}>
-                        {transaction.date} | {transaction.amount}
+        
+                        {transaction.date} | {transaction.amount} | {transaction.goal_id}
                     </p>)}
                 </div>
             </div>
@@ -25,7 +28,8 @@ class TransactionsContainer extends Component {
 
 function mapStateToProps(state){
     return{
-        transactions: state.transactions 
+        transactions: state.transactions, 
+        goals: state.goals
     }
 
 }
