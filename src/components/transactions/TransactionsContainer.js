@@ -15,10 +15,17 @@ class TransactionsContainer extends Component {
             <div>
                 <h2>Transaction History</h2>
                 <div>
-                    {this.props.transactions.map(transaction => <p key={transaction.id}>
-        
-                        {transaction.date} | {transaction.amount} | {transaction.goal_id}
-                    </p>)}
+                    {this.props.transactions.map(transaction => {
+
+                    const findGoal = this.props.goals.find(({id}) => {
+                        console.log(id, transaction.goal_id)
+                       return id === transaction.goal_id})
+                        return <p key={transaction.id}>
+                        
+                        {transaction.date} | {transaction.amount} | 
+                        {findGoal && findGoal.name}
+                    </p>})}
+    
                 </div>
             </div>
         )

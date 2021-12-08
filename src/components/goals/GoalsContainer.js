@@ -5,9 +5,9 @@ import { postGoals } from './../../redux/goalsActions'
 
 class GoalsContainer extends Component {
 
-    componentDidMount(){
-        this.props.dispatchPostGoals()
-    }
+    // componentDidMount(){
+    //     this.props.dispatchPostGoals()
+    // }
 
     render() {
         return (
@@ -33,10 +33,10 @@ function mapStateToProps(state){
 
 }
 
-function mapDispatchToProps(dispatch) {
-    return {
-        dispatchPostGoals: () => dispatch(postGoals())
-    }
-}
+// function mapDispatchToProps(dispatch) {
+//     return {
+//         dispatchPostGoals: () => dispatch(postGoals())
+//     }
+// }
 
-export default connect(mapStateToProps, mapDispatchToProps)(GoalsContainer)
+export default connect(mapStateToProps)(GoalsContainer)

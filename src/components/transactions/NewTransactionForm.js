@@ -10,18 +10,18 @@ class NewTransactionForm extends Component {
         goal: ""
       }
     
-      handleChange = e => {
-        this.setState({state: 
-            e.target.value})
-      }
-
     //   handleChange = e => {
-    //     const value = e.target.value;
-    //     this.setState({state:
-    //         ...state,
-    //         [e.target.name]: value
-    //   })
-    // }
+    //     this.setState({
+    //         state: 
+    //         e.target.value})
+    //   }
+
+      handleChange = e => {
+        const value = e.target.value;
+        this.setState({
+            [e.target.name]: value
+      })
+    }
     
       handleSubmit = e => {
         e.preventDefault()
@@ -42,6 +42,7 @@ class NewTransactionForm extends Component {
                  id="transaction-date-input" 
                  onChange={this.handleChange} 
                  value={this.state.date} 
+                 name="date"
                  type="text" />
 
             <label htmlFor="transaction-amount-input">Amount:</label>
@@ -49,10 +50,11 @@ class NewTransactionForm extends Component {
                  id="transaction-amount-input" 
                  onChange={this.handleChange} 
                  value={this.state.amount} 
+                 name="amount"
                  type="text" />
 
             <label htmlFor="transaction-goal-input">Goal:</label>
-            <select id="transaction-goal-input" onChange={this.handleChange} value={this.state.goal.id} type="text" >
+            <select id="transaction-goal-input" onChange={this.handleChange} value={this.state.goal.id} name="goal">
                 {this.props.goals.map(goal => <option value={goal.id} key={goal.id}>{goal.name}</option>)}
             </select>
 

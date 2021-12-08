@@ -1,9 +1,18 @@
 //import logo from './logo.svg';
+import React, { Component } from 'react'
 import './App.css';
 import { NavLink } from 'react-router-dom';
 import Displays from './components/Displays';
+import { connect } from 'react-redux'
+import { postGoals } from './redux/goalsActions';
 
-function App() {
+class App extends Component {
+
+  componentDidMount(){
+    this.props.dispatchPostGoals()
+  }
+  
+render(){
   return (
     <div>
       <h1>Track Your Savings Goals!</h1>
@@ -17,7 +26,13 @@ function App() {
     </div>
     
     
-  );
+  )};
 }
 
-export default App;
+function mapDispatchToProps(dispatch) {
+  return {
+      dispatchPostGoals: () => dispatch(postGoals())
+  }
+}
+
+export default connect(null, mapDispatchToProps)(App);
