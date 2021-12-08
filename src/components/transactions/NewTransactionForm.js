@@ -10,12 +10,18 @@ class NewTransactionForm extends Component {
         goal: ""
       }
     
+      handleChange = e => {
+        this.setState({state: 
+            e.target.value})
+      }
+
     //   handleChange = e => {
-    //     this.setState({
-    //         date: e.target.value,
-    //         amount: e.target.value,
-    //         goal: e.target.value})
-    //   }
+    //     const value = e.target.value;
+    //     this.setState({state:
+    //         ...state,
+    //         [e.target.name]: value
+    //   })
+    // }
     
       handleSubmit = e => {
         e.preventDefault()
