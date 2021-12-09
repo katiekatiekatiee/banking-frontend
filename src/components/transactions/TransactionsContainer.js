@@ -1,22 +1,18 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { postTransactions } from './../../redux/transactionsActions'
+//import { postTransactions } from './../../redux/transactionsActions'
 
 class TransactionsContainer extends Component {
 
-    componentDidMount(){
-        this.props.dispatchPostTransactions()
-    }
+    // componentDidMount(){
+    //     this.props.dispatchPostTransactions()
+    // }
 
     render(){
         
         return (
             
             <div>
-                {/* <h2>Total in Savings</h2>
-                <div>
-                   
-                </div> */}
 
                 <h2>Transaction History</h2>
                 <div>
@@ -46,10 +42,10 @@ function mapStateToProps(state){
 
 }
 
-function mapDispatchToProps(dispatch) {
-    return {
-        dispatchPostTransactions: () => dispatch(postTransactions())
-    }
-}
+// function mapDispatchToProps(dispatch) {
+//     return {
+//         dispatchPostTransactions: () => dispatch(postTransactions())
+//     }
+// }
 
-export default connect(mapStateToProps, mapDispatchToProps)(TransactionsContainer)
+export default connect(mapStateToProps)(TransactionsContainer)

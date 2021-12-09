@@ -11,24 +11,23 @@ class GoalsContainer extends Component {
 
     render() {
 
-            const transactionAmounts = this.props.transactions.map(({t}) => t.amount)
+            const transactionAmounts = this.props.transactions.map((t) => t.amount)
         
-            const total = transactionAmounts.reduce(
+            const savedTotal = transactionAmounts.reduce(
               (prevValue, currentValue) => prevValue + currentValue, 0
             );
            
-          
-
         // {const savingsCalc = () => {
         //     this.props.transactions.amount.reduce((a, b, index) => a + b, 0);
         // }
         // return savingsCalc()
         // };
         // {console.log(savingsCalc)}
+
         return (
             <div>
               
-               <div>Total Saved: {total} </div>
+               <div>Total Saved: {savedTotal} </div>
                  
                 <h3>Reasons to Save:</h3>      
                 <ul>

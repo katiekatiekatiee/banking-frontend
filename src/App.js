@@ -5,13 +5,13 @@ import { NavLink } from 'react-router-dom';
 import Displays from './components/Displays';
 import { connect } from 'react-redux'
 import { postGoals } from './redux/goalsActions';
-//import { postTransactions } from './redux/transactionsActions'
+import { postTransactions } from './redux/transactionsActions'
 
 class App extends Component {
 
   componentDidMount(){
     this.props.dispatchPostGoals()
-    // this.props.dispatchPostTransactions()
+    this.props.dispatchPostTransactions()
   }
 
 render(){
@@ -34,7 +34,7 @@ render(){
 function mapDispatchToProps(dispatch) {
   return {
       dispatchPostGoals: () => dispatch(postGoals()),
-      // dispatchPostTransactions: () => dispatch(postTransactions())
+      dispatchPostTransactions: () => dispatch(postTransactions())
   }
 }
 
