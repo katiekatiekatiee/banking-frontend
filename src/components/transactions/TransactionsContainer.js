@@ -13,6 +13,11 @@ class TransactionsContainer extends Component {
         return (
             
             <div>
+                {/* <h2>Total in Savings</h2>
+                <div>
+                   
+                </div> */}
+
                 <h2>Transaction History</h2>
                 <div>
                     {this.props.transactions.map(transaction => {

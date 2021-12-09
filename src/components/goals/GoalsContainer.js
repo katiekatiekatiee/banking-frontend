@@ -10,17 +10,33 @@ class GoalsContainer extends Component {
     // }
 
     render() {
+
+            const transactionAmounts = this.props.transactions.map(({t}) => t.amount)
+        
+            const total = transactionAmounts.reduce(
+              (prevValue, currentValue) => prevValue + currentValue, 0
+            );
+           
+          
+
+        // {const savingsCalc = () => {
+        //     this.props.transactions.amount.reduce((a, b, index) => a + b, 0);
+        // }
+        // return savingsCalc()
+        // };
+        // {console.log(savingsCalc)}
         return (
             <div>
-                {/* <h1>Savings Total: {insert functional component here that will add total of all savings}</h1> */}
-                 <h3>Reasons to Save:</h3>
-                 {/* <GoalsDropdown goals={this.props.goals}/> */}
+              
+               <div>Total Saved: {total} </div>
                  
+                <h3>Reasons to Save:</h3>      
                 <ul>
                     {this.props.goals.map(goal => <li key={goal.id}>
                         {goal.name}
                     </li>)}
                 </ul>
+                
             </div>
         )
     }
@@ -28,7 +44,8 @@ class GoalsContainer extends Component {
 
 function mapStateToProps(state){
     return{
-        goals: state.goals 
+        goals: state.goals, 
+        transactions: state.transactions
     }
 
 }
