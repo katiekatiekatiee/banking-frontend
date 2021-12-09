@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { postGoals } from './../../redux/goalsActions'
+// import { postGoals } from './../../redux/goalsActions'
 // import { GoalsDropdown } from './GoalsDropdown'
 
 class GoalsContainer extends Component {

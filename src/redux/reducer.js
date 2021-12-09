@@ -14,7 +14,9 @@ function reducer(state = {goals: [], transactions: []}, action) {
             return {
                 ...state,
                 transactions: [...state.transactions, action.payload]
+                
             };
+    
 
         // break;
         default:

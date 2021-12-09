@@ -18,8 +18,8 @@ class TransactionsContainer extends Component {
                     {this.props.transactions.map(transaction => {
 
                     const findGoal = this.props.goals.find(({id}) => {
-                        console.log(id, transaction.goal_id)
-                       return id === transaction.goal_id})
+                        // console.log(id, transaction.goal_id)
+                        return id === transaction.goal_id})
                         return <p key={transaction.id}>
                         
                         {transaction.date} | {transaction.amount} | 

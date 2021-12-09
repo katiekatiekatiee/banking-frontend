@@ -7,7 +7,7 @@ class NewTransactionForm extends Component {
     state = {
         date: "",
         amount: "",
-        goal: ""
+        goal_id: ""
       }
     
     //   handleChange = e => {
@@ -26,9 +26,10 @@ class NewTransactionForm extends Component {
       handleSubmit = e => {
         e.preventDefault()
         this.props.dispatchAddTransaction(this.state)
+        // debugger
         
         this.setState({
-            name: "",
+            date: "",
             amount: "",
             goal: ""})
       }
@@ -54,7 +55,7 @@ class NewTransactionForm extends Component {
                  type="text" />
 
             <label htmlFor="transaction-goal-input">Goal:</label>
-            <select id="transaction-goal-input" onChange={this.handleChange} value={this.state.goal.id} name="goal">
+            <select id="transaction-goal-input" onChange={this.handleChange} value={this.state.goal_id} name="goal_id">
                 {this.props.goals.map(goal => <option value={goal.id} key={goal.id}>{goal.name}</option>)}
             </select>
 
