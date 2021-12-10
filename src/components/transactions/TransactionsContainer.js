@@ -21,11 +21,12 @@ class TransactionsContainer extends Component {
                     const findGoal = this.props.goals.find(({id}) => {
                         // console.log(id, transaction.goal_id)
                         return id === transaction.goal_id})
-                        return <p key={transaction.id}>
+                        return <ul key={transaction.id}>
                         
-                        {transaction.date} | {transaction.amount} | 
-                        {findGoal && findGoal.name}
-                    </p>})}
+                        <li>Date: {transaction.date}</li>
+                        <li>Amount: ${transaction.amount}</li>
+                        <li>Goal: {findGoal && findGoal.name}</li>
+                    </ul>})}
     
                 </div>
             </div>

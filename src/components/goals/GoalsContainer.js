@@ -14,15 +14,9 @@ class GoalsContainer extends Component {
             const transactionAmounts = this.props.transactions.map((t) => t.amount)
         
             const savedTotal = transactionAmounts.reduce(
-              (prevValue, currentValue) => prevValue + currentValue, 0
+              (a, b) => a + b, 0
             );
-           
-        // {const savingsCalc = () => {
-        //     this.props.transactions.amount.reduce((a, b, index) => a + b, 0);
-        // }
-        // return savingsCalc()
-        // };
-        // {console.log(savingsCalc)}
+        
 
         return (
             <div>

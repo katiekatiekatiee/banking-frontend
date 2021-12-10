@@ -17,7 +17,7 @@ class App extends Component {
 render(){
   return (
     <div>
-      <h1>Track Your Savings Goals!</h1>
+      <h1>Savings Calculator</h1>
       <div className="nav-links">
         <NavLink to="/" >Home</NavLink> |  
         <NavLink to="/transaction-history">Transaction History</NavLink> | 

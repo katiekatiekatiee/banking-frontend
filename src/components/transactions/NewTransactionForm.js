@@ -9,12 +9,6 @@ class NewTransactionForm extends Component {
         amount: "",
         goal_id: ""
       }
-    
-    //   handleChange = e => {
-    //     this.setState({
-    //         state: 
-    //         e.target.value})
-    //   }
 
       handleChange = e => {
         const value = e.target.value;
@@ -36,6 +30,8 @@ class NewTransactionForm extends Component {
 
     render() {
         return (
+            <div>
+                <p>To add a transaction, enter the date (MM/DD/YY) and amount saved. <br/> Withdrawl transactions can be displayed using a hyphen (e.g. -25). <br/> Then select the goal the funds are being saved for!</p>
             <form onSubmit={this.handleSubmit}>
 
             <label htmlFor="transaction-date-input">Date:</label>
@@ -62,6 +58,7 @@ class NewTransactionForm extends Component {
              <input type="submit" value="Post Transaction" />
 
         </form>
+        </div>
         )
     }
 }
