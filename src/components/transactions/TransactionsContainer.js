@@ -23,9 +23,9 @@ class TransactionsContainer extends Component {
                         return id === transaction.goal_id})
                         return <ul key={transaction.id}>
                         
-                        <li>Date: {transaction.date}</li>
-                        <li>Amount: ${transaction.amount}</li>
-                        <li>Goal: {findGoal && findGoal.name}</li>
+                        <li>Date: {transaction.date}<br/>
+                        Amount: ${transaction.amount}<br/>
+                        Goal: {findGoal && findGoal.name}</li><br/>
                     </ul>})}
     
                 </div>

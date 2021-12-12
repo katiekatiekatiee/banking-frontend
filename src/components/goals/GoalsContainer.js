@@ -24,11 +24,11 @@ class GoalsContainer extends Component {
                <div className="total">Total Saved: ${savedTotal} </div>
                  
                 <h3>Reasons to Save:</h3>      
-                <ul>
+                <ol>
                     {this.props.goals.map(goal => <li key={goal.id}>
                         {goal.name}
                     </li>)}
-                </ul>
+                </ol>
                 
             </div>
         )
