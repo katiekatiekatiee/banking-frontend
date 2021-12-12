@@ -8,22 +8,11 @@ h1 {
   
 };
 
-h2 {
+.total {
+  color: pink
+}
 
-};
 
-h3 {
-
-};
-
-p {
-  font-style: bold;
-  color: orange;
-};
-
-div {
-  font-style: bold;
-};
 
 
 

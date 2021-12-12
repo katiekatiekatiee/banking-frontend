@@ -21,7 +21,7 @@ class GoalsContainer extends Component {
         return (
             <div>
               
-               <div>Total Saved: {savedTotal} </div>
+               <div className="total">Total Saved: ${savedTotal} </div>
                  
                 <h3>Reasons to Save:</h3>      
                 <ul>
