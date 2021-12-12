@@ -43,10 +43,8 @@ function mapStateToProps(state){
 
 }
 
-// function mapDispatchToProps(dispatch) {
-//     return {
-//         dispatchPostGoals: () => dispatch(postGoals())
-//     }
-// }
-
 export default connect(mapStateToProps)(GoalsContainer)
+
+
+
+
