@@ -1,4 +1,39 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+h1 {
+  color: blue;
+  font-family: verdana;
+  text-align: center;
+  font-family: 'Bebas Neue', cursive;
+  
+};
+
+h2 {
+
+};
+
+h3 {
+
+};
+
+p {
+  font-style: bold;
+  color: orange;
+};
+
+div {
+  font-style: bold;
+};
+
+
+
+
+
+
+
+
+
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +70,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */

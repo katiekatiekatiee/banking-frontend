@@ -6,7 +6,7 @@ import Displays from './components/Displays';
 import { connect } from 'react-redux'
 import { postGoals } from './redux/goalsActions';
 import { postTransactions } from './redux/transactionsActions'
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends Component {
 
@@ -18,6 +18,7 @@ class App extends Component {
 render(){
   return (
     <div>
+     
       <h1>Savings Calculator</h1>
       <div className="nav-links">
         <NavLink to="/" >Home</NavLink> |  
@@ -26,6 +27,7 @@ render(){
         
       </div>
       <Displays />
+     
     </div>
     
     

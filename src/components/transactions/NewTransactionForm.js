@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { addTransaction } from '../../redux/transactionsActions';
 import { connect } from 'react-redux';
 import Button from 'react-bootstrap/Button';
+// import { DropdownButton } from 'react-bootstrap';
 
 class NewTransactionForm extends Component {
 
@@ -53,10 +54,9 @@ class NewTransactionForm extends Component {
 
             <label htmlFor="transaction-goal-input">Goal:</label>
             <select id="transaction-goal-input" onChange={this.handleChange} value={this.state.goal_id} name="goal_id">
-                {this.props.goals.map(goal => <option value={goal.id} key={goal.id}>{goal.name}</option>)}
+              {this.props.goals.map(goal =>  <option value={goal.id} key={goal.id}>{goal.name}</option>)}
             </select>
-
-             {/* <input type="submit" value="" /> */}
+           
              <Button as="input" type="submit" value="Post Transaction" />
 
         </form>
