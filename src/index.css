@@ -47,8 +47,21 @@ div {
 
 ul {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
+
+  background: #5B6D5B;
+  padding: 15px;
+  text-align: center;
+  
+  
+}
+
+ul li {
+  background: #8E9775;
+  margin: 5px;
+  
+  top: 50%;
+  -ms-transform: translateY(50%);
+  transform: translateY(20%);
 }
 
 p {
