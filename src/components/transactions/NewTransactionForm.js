@@ -27,7 +27,7 @@ class NewTransactionForm extends Component {
         this.setState({
             date: "",
             amount: "",
-            goal: ""})
+            goal_id: ""})
       }
 
     render() {

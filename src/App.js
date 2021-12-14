@@ -22,7 +22,7 @@ render(){
       <h1>Savings Calculator</h1>
       <div className="nav-links">
         <NavLink to="/" >Home</NavLink> |  
-        <NavLink to="/transaction-history">Transaction History</NavLink> | 
+        <NavLink to="/transactions">Transaction History</NavLink> | 
         <NavLink to="/transactions/new">Add Transaction</NavLink> 
         
       </div>
