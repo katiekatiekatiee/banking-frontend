@@ -25,7 +25,8 @@ class TransactionsContainer extends Component {
                         
                         <li>Date: {transaction.date}<br/>
                         Amount: ${transaction.amount}<br/>
-                        Goal: {findGoal && findGoal.name}</li><br/>
+                        Goal: {findGoal && findGoal.name}<br/>
+                        <button>Delete Transaction</button></li><br/>
                     </ul>})}
     
                 </div>
