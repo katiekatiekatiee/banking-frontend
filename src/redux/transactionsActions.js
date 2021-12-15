@@ -31,6 +31,8 @@ export const addTransaction = (trans) => {
         method: "DELETE"
       })
       .then(r => r.json())
-      .then(transId => dispatch({type: "DELETE_TRANSACTION", payload: transId}))
+      .then(transId => {
+        // debugger
+        dispatch({type: "DELETE_TRANSACTION", payload: id})})
     }
   }

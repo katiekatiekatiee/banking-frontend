@@ -9,9 +9,10 @@ class TransactionsContainer extends Component {
     //     this.props.dispatchPostTransactions()
     // }
 
-    handleDelete = () => {
+    handleDelete = (transId) => {
+        // debugger
         // console.log(this.props.transaction) //transaction is undefined
-        this.props.dispatchDeleteTransaction(this.props.transaction.id)
+        this.props.dispatchDeleteTransaction(parseInt(transId, 10))
       }
 
     render(){
@@ -20,7 +21,7 @@ class TransactionsContainer extends Component {
             <div>
                 <h2>Transaction History</h2>
                 <div>
-                    {this.props.transactions.map(transaction => {
+                    {this.props.transactions.map((transaction) => {
 
                     const findGoal = this.props.goals.find(({id}) => {
                         // console.log(id, transaction.goal_id)
@@ -30,7 +31,7 @@ class TransactionsContainer extends Component {
                         <li>Date: {transaction.date}<br/>
                         Amount: ${transaction.amount}<br/>
                         Goal: {findGoal && findGoal.name}<br/>
-                        <button onClick={this.handleDelete}>Delete Transaction</button></li><br/>
+                        <button onClick={() => this.handleDelete(transaction.id)}>Delete Transaction</button></li><br/>
                     </ul>})}
     
                 </div>
