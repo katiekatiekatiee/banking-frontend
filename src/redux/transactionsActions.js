@@ -24,3 +24,13 @@ export const addTransaction = (trans) => {
       .then(transaction => dispatch({type: "ADD_TRANSACTION", payload: transaction}))
     }
   }
+
+  export const deleteTransaction = (id) => {
+    return (dispatch) => {
+      fetch(`http://localhost:3000/transactions/${id}`, {
+        method: "DELETE"
+      })
+      .then(r => r.json())
+      .then(transId => dispatch({type: "DELETE_TRANSACTION", payload: transId}))
+    }
+  }

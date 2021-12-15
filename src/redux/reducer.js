@@ -16,8 +16,13 @@ function reducer(state = {goals: [], transactions: []}, action) {
                 transactions: [...state.transactions, action.payload]
                 
             };
-    
+        case "DELETE_TRANSACTION":
+            const newTransactionList = state.transactions.filter(t => t.id !== action.payload)
 
+            return {
+                ...state,
+                transactions: newTransactionList
+            }
         // break;
         default:
             return state;

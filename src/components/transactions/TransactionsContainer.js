@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 //import { postTransactions } from './../../redux/transactionsActions'
+import { deleteTransaction } from './../../redux/transactionsActions'
 
 class TransactionsContainer extends Component {
 
@@ -8,12 +9,15 @@ class TransactionsContainer extends Component {
     //     this.props.dispatchPostTransactions()
     // }
 
-    render(){
-        
-        return (
-            
-            <div>
+    handleDelete = () => {
+        // console.log(this.props.transaction) //transaction is undefined
+        this.props.dispatchDeleteTransaction(this.props.transaction.id)
+      }
 
+    render(){
+
+        return (
+            <div>
                 <h2>Transaction History</h2>
                 <div>
                     {this.props.transactions.map(transaction => {
@@ -26,7 +30,7 @@ class TransactionsContainer extends Component {
                         <li>Date: {transaction.date}<br/>
                         Amount: ${transaction.amount}<br/>
                         Goal: {findGoal && findGoal.name}<br/>
-                        <button>Delete Transaction</button></li><br/>
+                        <button onClick={this.handleDelete}>Delete Transaction</button></li><br/>
                     </ul>})}
     
                 </div>
@@ -44,10 +48,10 @@ function mapStateToProps(state){
 
 }
 
-// function mapDispatchToProps(dispatch) {
-//     return {
-//         dispatchPostTransactions: () => dispatch(postTransactions())
-//     }
-// }
+function mapDispatchToProps(dispatch) {
+    return {
+        dispatchDeleteTransaction: (id) => dispatch( deleteTransaction(id) )
+    }
+}
 
-export default connect(mapStateToProps)(TransactionsContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(TransactionsContainer)
