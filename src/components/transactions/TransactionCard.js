@@ -5,7 +5,6 @@ import { connect } from 'react-redux';
 const TransactionCard = (props) => {
     function handleDelete () {
         // debugger
-        // console.log(this.props.transaction) //transaction is undefined
         props.dispatchDeleteTransaction(parseInt(props.id))
       }
 

@@ -6,6 +6,26 @@ import TransactionCard from './TransactionCard';
 
 class TransactionsContainer extends Component {
 
+    render() {
+        return (
+        <div className="transactions-list">
+            <h2>Transaction History</h2>
+            {this.props.transactions.map(t => <TransactionCard key={t.id} {...t} /> )}
+        </div>
+        );
+    }
+}
+
+const mapStateToProps = state => ({
+    
+    transactions: state.transactions, 
+    // goals: state.goals
+
+})
+
+export default connect(mapStateToProps)(TransactionsContainer)
+
+
     // componentDidMount(){
     //     this.props.dispatchPostTransactions()
     // }
@@ -22,14 +42,7 @@ class TransactionsContainer extends Component {
     //         return e.target.value = trans.date
     //     })
     // }
-    render() {
-        return (
-        <div className="transactions-list">
-            <h2>Transaction History</h2>
-            {this.props.transactions.map(t => <TransactionCard key={t.id} {...t} /> )}
-        </div>
-        );
-    }
+  
 
     // render(){
 
@@ -56,14 +69,9 @@ class TransactionsContainer extends Component {
     //     )
     // }
    
-}
 
-const mapStateToProps = state => ({
-    
-        transactions: state.transactions, 
-        goals: state.goals
 
-})
+
 
 // const mapDispatchToProps = (dispatch) => ({
     
@@ -71,4 +79,3 @@ const mapStateToProps = state => ({
     
 // })
 
-export default connect(mapStateToProps)(TransactionsContainer)
