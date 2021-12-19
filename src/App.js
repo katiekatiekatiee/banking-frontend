@@ -23,7 +23,8 @@ render(){
       <div className="nav-links">
         <NavLink to="/" >Home</NavLink> |  
         <NavLink to="/transactions">Transaction History</NavLink> | 
-        <NavLink to="/transactions/new">Add Transaction</NavLink> 
+        <NavLink to="/transactions/new">Add Transaction</NavLink> |
+        <NavLink to="/search">Search by Date</NavLink>
         
       </div>
       <Displays />

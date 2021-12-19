@@ -1,16 +1,25 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+// import Search from './Search';
 //import { postTransactions } from './../../redux/transactionsActions'
 // import { deleteTransaction } from './../../redux/transactionsActions';
 import TransactionCard from './TransactionCard';
 
 class TransactionsContainer extends Component {
 
+    // handleSearchChange = (event) => {
+    //     debugger
+
+    // }
+
     render() {
         return (
+        <div>
+            
         <div className="transactions-list">
             <h2>Transaction History</h2>
             {this.props.transactions.map(t => <TransactionCard key={t.id} {...t} /> )}
+        </div>
         </div>
         );
     }

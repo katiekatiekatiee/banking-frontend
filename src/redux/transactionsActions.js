@@ -36,3 +36,12 @@ export const addTransaction = (trans) => {
         dispatch({type: "DELETE_TRANSACTION", payload: id})})
     }
   }
+
+  // export const filterTranscactions = (transactions, date) => {
+  //   return(dispatch) => {
+  //     fetch("http://localhost:3000/transactions")
+  //     .then(r => r.json())
+  //     .then(transactions => dispatch({type: "FILTER_TRANSACTIONS", payload: transactions}))
+
+  //   }
+  // }

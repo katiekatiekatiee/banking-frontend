@@ -22,7 +22,9 @@ function reducer(state = {goals: [], transactions: []}, action) {
             return {
                 ...state,
                 transactions: newTransactionList
-            }
+            };
+        // case "FILTER_TRANSACTIONS":
+        //     const filteredTranscations = state.transactions.filter(t => t.date === action.payload)
         // break;
         default:
             return state;
