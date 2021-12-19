@@ -17,7 +17,7 @@ class Search extends Component {
 
         const filteredTrans = this.props.transactions.filter(t =>
             t.date.includes(this.state.searchTerm)
-          )
+        )
 
           const newList = filteredTrans.map(t => <TransactionCard key={t.id} {...t}  />)
 

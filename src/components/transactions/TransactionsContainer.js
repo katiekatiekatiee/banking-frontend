@@ -7,11 +7,6 @@ import TransactionCard from './TransactionCard';
 
 class TransactionsContainer extends Component {
 
-    // handleSearchChange = (event) => {
-    //     debugger
-
-    // }
-
     render() {
         return (
         <div>
@@ -27,8 +22,7 @@ class TransactionsContainer extends Component {
 
 const mapStateToProps = state => ({
     
-    transactions: state.transactions, 
-    // goals: state.goals
+    transactions: state.transactions
 
 })
 
@@ -45,12 +39,7 @@ export default connect(mapStateToProps)(TransactionsContainer)
     //     this.props.dispatchDeleteTransaction(parseInt(transId, 10))
     //   }
 
-    // handleSearch = (e) => {
-    //     // debugger
-    //     this.props.transactions.filter((trans) => {
-    //         return e.target.value = trans.date
-    //     })
-    // }
+
   
 
     // render(){
@@ -59,7 +48,6 @@ export default connect(mapStateToProps)(TransactionsContainer)
     //         <div>
     //             <h2>Transaction History</h2>
     //             <div>
-    //                 {/* <p>Search Transactions by date (MM/DD/YY): <input type="text" placeholder="Search..." onChange={this.handleSearch}></input></p> */}
     //                 {this.props.transactions.map((transaction) => {
 
     //                 const findGoal = this.props.goals.find(({id}) => {
