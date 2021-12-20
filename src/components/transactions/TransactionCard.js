@@ -3,6 +3,7 @@ import { deleteTransaction } from './../../redux/transactionsActions';
 import { connect } from 'react-redux';
 
 const TransactionCard = (props) => {
+    
     function handleDelete () {
         // debugger
         props.dispatchDeleteTransaction(parseInt(props.id))
@@ -32,9 +33,9 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = (dispatch) => ({
     
-            dispatchDeleteTransaction: (id) => dispatch( deleteTransaction(id) )
+        dispatchDeleteTransaction: (id) => dispatch( deleteTransaction(id) )
         
-    })
+})
 
 export default connect(mapStateToProps, mapDispatchToProps)(TransactionCard)
 

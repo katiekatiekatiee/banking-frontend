@@ -16,7 +16,6 @@ const TransactionSum = (props) => {
 
 function mapStateToProps(state){
     return{
-        // goals: state.goals, 
         transactions: state.transactions
     }
 

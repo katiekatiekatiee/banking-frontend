@@ -5,23 +5,10 @@ import { connect } from 'react-redux'
 
 class GoalsContainer extends Component {
 
-    // componentDidMount(){
-    //     this.props.dispatchPostGoals()
-    // }
-
     render() {
-
-            // const transactionAmounts = this.props.transactions.map((t) => t.amount)
-        
-            // const savedTotal = transactionAmounts.reduce(
-            //   (a, b) => a + b, 0
-            // );
-        
 
         return (
             <div>
-              
-               {/* <div className="total">Total Saved: ${savedTotal} </div> */}
                  
                 <h3>Reasons to Save:</h3>      
                 <ol>
@@ -38,7 +25,6 @@ class GoalsContainer extends Component {
 function mapStateToProps(state){
     return{
         goals: state.goals, 
-        // transactions: state.transactions
     }
 
 }

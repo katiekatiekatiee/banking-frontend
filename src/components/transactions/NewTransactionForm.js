@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { addTransaction } from '../../redux/transactionsActions';
 import { connect } from 'react-redux';
 import Button from 'react-bootstrap/Button';
-// import { DropdownButton } from 'react-bootstrap';
 
 class NewTransactionForm extends Component {
 

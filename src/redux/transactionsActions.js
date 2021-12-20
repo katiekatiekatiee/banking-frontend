@@ -1,6 +1,3 @@
-// export const postTransactions = (transactions) => ({type: "POST_TRANSACTIONS", payload: transactions})
-//DISPATCH -> THUNK
-
 
 export const postTransactions = () => {
     return (dispatch) => {                              
@@ -37,11 +34,3 @@ export const addTransaction = (trans) => {
     }
   }
 
-  // export const filterTranscactions = (transactions, date) => {
-  //   return(dispatch) => {
-  //     fetch("http://localhost:3000/transactions")
-  //     .then(r => r.json())
-  //     .then(transactions => dispatch({type: "FILTER_TRANSACTIONS", payload: transactions}))
-
-  //   }
-  // }

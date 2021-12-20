@@ -4,9 +4,6 @@ import GoalsContainer from './goals/GoalsContainer';
 import TransactionsContainer from './transactions/TransactionsContainer';
 import NewTransactionForm from './transactions/NewTransactionForm';
 import Search from './transactions/Search';
-//import { ButtonGroup, Button } from 'react-bootstrap';
-// import NavMenu from './NavMenu'
-// import { Breadcrumb } from 'react-bootstrap';
 
 
 const NavBar = () => {

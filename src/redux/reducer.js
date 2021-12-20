@@ -1,4 +1,4 @@
-function reducer(state = {goals: [], transactions: []}, action) {
+function reducer(state = {goals: [], transactions: [], search: ''}, action) {
     switch(action.type) {
         case "POST_TRANSACTIONS":
             return{
@@ -23,6 +23,7 @@ function reducer(state = {goals: [], transactions: []}, action) {
                 ...state,
                 transactions: newTransactionList
             };
+       
         // break;
         default:
             return state;
@@ -31,3 +32,15 @@ function reducer(state = {goals: [], transactions: []}, action) {
 
 export default reducer;
 
+
+
+
+ // case "SEARCH_TRANSACTIONS":
+        //     const filteredTrans = state.transactions.filter(t =>
+        //         t.date.includes(state.search)
+        //     )
+    
+        //     return{
+        //         ...state,
+        //         transactions: filteredTrans
+        //     };
