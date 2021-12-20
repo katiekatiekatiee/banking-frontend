@@ -11,6 +11,7 @@ class TransactionsContainer extends Component {
             <div className="transactions-list">
                 <h2>Transaction History</h2>
                     {this.props.transactions.map(t => <TransactionCard key={t.id} {...t} /> )}
+                    
             </div>
        
         );
@@ -19,8 +20,7 @@ class TransactionsContainer extends Component {
 
 const mapStateToProps = state => ({
     
-    transactions: state.transactions,
-    search: state.search
+    transactions: state.transactions
 
 })
 

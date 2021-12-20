@@ -24,7 +24,7 @@ class Search extends Component {
 
         return (
             <div>
-                Search by Date (MM/DD/YY): <input className="search-prompt" onChange={this.handleSearchChange} placeholder="Search..." />
+                Search by Date (MM/DD/YY): <input className="search-prompt" type="text" name="search" onChange={this.handleSearchChange} placeholder="Search..." />
                 {newList}
             </div>
         )
