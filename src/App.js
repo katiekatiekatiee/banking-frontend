@@ -11,7 +11,9 @@ import { postTransactions } from './redux/transactionsActions'
 class App extends Component {
 
   componentDidMount(){
+    console.log('a')
     this.props.dispatchPostGoals()
+    console.log('b')
     this.props.dispatchPostTransactions()
   }
 
