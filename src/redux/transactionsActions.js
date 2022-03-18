@@ -34,3 +34,10 @@ export const addTransaction = (trans) => {
     }
   }
 
+  export const searchTransactions = transaction => {
+    return (dispatch) => {
+      fetch(`http://localhost:3000/transactions/search?q=${transaction.date}`, {
+
+      })
+    }
+  }
