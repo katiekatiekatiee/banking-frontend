@@ -45,6 +45,6 @@ export const addTransaction = (trans) => {
         body: JSON.stringify(transaction)
       })
       .then(r => r.json())
-      .then(transaction => dispatch({type: "SEARCH_TRANSACTION", payload: transaction}))
+      .then(transaction => dispatch({type: "SEARCH_TRANSACTIONS", payload: transaction}))
     }
   }

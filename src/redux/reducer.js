@@ -23,6 +23,11 @@ function reducer(state = {goals: [], transactions: []}, action) {
                 ...state,
                 transactions: newTransactionList
             };
+        case "SEARCH_TRANSCATIONS":
+            return {
+                ...state,
+                transactions: action.payload
+            }
        
         // break;
         default:
