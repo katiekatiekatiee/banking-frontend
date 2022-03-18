@@ -37,7 +37,14 @@ export const addTransaction = (trans) => {
   export const searchTransactions = transaction => {
     return (dispatch) => {
       fetch(`http://localhost:3000/transactions/search?q=${transaction.date}`, {
-
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify(transaction)
       })
+      .then(r => r.json())
+      .then(transaction => dispatch({type: "SEARCH_TRANSACTION", payload: transaction}))
     }
   }
