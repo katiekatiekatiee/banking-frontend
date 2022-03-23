@@ -7,5 +7,12 @@ class altSearch extends Component {
         searchTerm: ''
     }
 
-    
+    render() {
+        <div>
+            <form onSubmit={this.handleSubmit}>
+                <label>Enter Date to Search: </label>
+                <input type="text" placeholder="Search..." name="search"/>
+            </form>
+        </div>
+    }
 }
