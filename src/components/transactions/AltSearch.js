@@ -2,17 +2,17 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { searchTransactions } from '../../redux/transactionsActions'
 
-class altSearch extends Component {
+export default class AltSearch extends Component {
     state = {
         searchTerm: ''
     }
 
     render() {
+        return(
         <div>
-            <form onSubmit={this.handleSubmit}>
-                <label>Enter Date to Search: </label>
-                <input type="text" placeholder="Search..." name="search"/>
-            </form>
+            <h1>HELLO WORLD</h1>
+           
         </div>
-    }
+        )}
 }
+
