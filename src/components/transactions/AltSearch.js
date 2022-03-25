@@ -1,19 +1,27 @@
-import React, { Component } from 'react'
-import { connect } from 'react-redux'
-import { searchTransactions } from '../../redux/transactionsActions'
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { searchTransactions } from '../../redux/transactionsActions';
 
 class AltSearch extends Component {
-    state = {
-        searchTerm: ''
+    
+    constructor(props) {
+        super(props);
+        console.log(this.props)
+        this.state = {
+            searchTerm: ''
+         }
     }
 
-    handleChange = () => {
+    handleChange = (e) => {
+        this.setState({
+            searchTerm: e.target.value
+        })
+    };
 
-    }
-
-    handleSubmit = () => {
-        
-    }
+    handleSubmit = (e) => {
+        e.preventDefault();
+        this.props.searchTransactions(this.state.searchTerm)
+    };
 
 
     render() {
@@ -27,7 +35,7 @@ class AltSearch extends Component {
             </form>
         </div>
         )}
-}
+};
 
-export default connect(null, {searchTransactions})(AltSearch)
+export default connect(null, {searchTransactions})(AltSearch);
 

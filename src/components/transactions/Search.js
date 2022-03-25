@@ -4,9 +4,10 @@ import TransactionCard from './TransactionCard'
 
 class Search extends Component {
 
-    state = {
-        searchTerm: ''
-    }
+        state = {
+            searchTerm: ''
+        }
+
 
     handleSearchChange = event => {
         // debugger
